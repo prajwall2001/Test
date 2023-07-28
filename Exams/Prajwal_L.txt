@@ -1,0 +1,156 @@
+1.Method overloading is In a Class the method having same name but containing different parameters.Which means inside parethensis there should be a different parameters.
+   Example:
+  class Car{
+  static void run(String name){
+  System.out.println("Invoking car in run...");
+  }
+static void run(int speed,float velocity)
+{
+System.out.println ("Inovking car in run");
+}
+}
+
+main method:
+class CarRunner{
+public static void main(String[] args)
+{
+System.out.println(Invoking main in CarRunner);
+car.run("Benz");
+System.out.println("Car name:"+run);
+car.run(70,50f)
+}
+}
+
+
+
+2.There are 3types of variable defined in java programs.
+1.Local variable :Varible which is declared inside the method
+2.Instance vatrible :Variable which is declared inside the class,but outside the method
+3.Static variable:Varible which declared using Static keyword.Sattic is shared memory.
+Example program:
+
+class Student{
+static int marks=50;   // static variable
+ static void exam(String usn)
+ {
+ String studName="Prajwal";   //local variable
+ System.out.println("name"+studName);
+}
+
+public static void main (String[] args)
+{
+System.out.println("Inovoking main method");
+String usn="4su19Is016";  //instance variable
+Student.exam(usn);
+}
+}
+
+
+
+
+3.Difference between heap and stack memory
+When we execute the program jvm creates heap memory which stores varibles of primitive datatype in constant pool and non-primitives in the instance memory.
+But stack create the stack frame and execute and store all methods and Constructors in it.And its address is pointing to heap.
+
+
+4.Contructor overloading means same constructor name but different parameters are used in the same constructor.
+class Vegetables{
+static void Cook(String name)
+{
+System.out.println("Invoking main");
+}
+static void Cook(String name,int experience)
+{
+System.out.println("Invoking main");
+}
+
+class VegetablesRunner{
+public static void main(String[] args)
+{
+Cook maker =new Cook("Pramod");
+maker.Cook();
+System.out.println("Inovoking constructor " +maker);
+Cook maker1 =new Cook("Pramod",3);
+maker1.Cook();
+System.out.println("Inovoking constructor " +maker1);
+}
+}
+
+
+5.Instance method overloading....
+
+class Vegetables{
+static void Cook()
+{
+System.out.println("Invoking main cook");
+}
+public static void eat()
+{
+System.out.println("Invoking main eat");
+}
+}
+
+class VegetablesRunner{
+public static void main(String[] args)
+{
+System.out.println("Inovoking main in VegetablesRunner");
+Cook.ref=new Cook();
+ref.Cook();
+}
+}
+
+
+
+
+6.Program for static varible and  static method
+
+class Car{
+static int speed=30;
+static float velocity=50f;
+static void run(int speed,float velocity)
+{
+System.out.println ("Inovking car in run");
+}
+}
+
+main method:
+class CarRunner{
+public static void main(String[] args)
+{
+System.out.println(Invoking main in CarRunner);
+car.run(int speed ,float velocity);
+System.out.println("Car speed:"+speed+ "Car velocity:" +velocity);
+}
+}
+
+
+
+
+7.Constructor chaining using this keyword 
+
+class Mechanic{
+static void repair()
+{
+System.out.println("Invoking mechanic");
+}
+
+static void repair(int items,String vehicle)
+{
+System.out.println("Invoking mechanic in:" this.items);
+System.out.println("Invoking mechanic in:" this.vehicle);
+this.items=items;
+this.vehicle=vehicle;
+}
+}
+
+class MechanicRepairer{
+public static void main (String[] args)
+{
+system.out.println("Invoking main in MechanicRepair");
+Mechanic mech =new Mechanic();
+Mechanic mech1=new Mechanic(3,"Car");
+this.mech1;
+}
+}
+
+
