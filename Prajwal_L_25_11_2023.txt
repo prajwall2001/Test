@@ -1,0 +1,120 @@
+2)The Collections Framework in Java embodies a comprehensive architecture for managing and manipulating collections of objects.
+It enables programmers to efficiently store, manipulate, and process data structures in Java.
+The hierarchy of the entire collection framework consists of four core interfaces such as Collection, List, Set, Map, and two specialized interfaces named SortedSet and SortedMap for sorting.All the interfaces and classes for the collection framework are located in java.util package.
+
+Collection Hierarchy in Java:------
+Extends: Extends is a keyword that is used for developing inheritance between two classes and two interfaces.
+Implements: Implements is a keyword used for developing inheritance between class and interface.
+
+Collection Interface-----
+*The basic interface of the collections framework is the Collection interface which is the root interface of all collections in the API (Application Programming Interface).
+It is placed at the top of the collection hierarchy in java. It provides the basic operations for adding and removing elements in the collection.
+*Collection interface extends the Iterable interface. The iterable interface has only one method called iterator().
+*List, Queue, and Set have three components which extends the Collection interface. A map is not inherited by Collection interface.
+
+List Interface---
+This interface represents a collection of elements whose elements are arranged sequentially ordered.Insert elements into the list at any location. The list allows storing duplicate elements in Java.
+ArrayList, vector, and LinkedList are three subclasses that implement the list interface.
+
+Set Interface----
+This interface represents a collection of elements that contains unique elements.It is used to store the collection of unique elements.
+Set interface does not maintain any order while storing elements. Set does not allow any duplicate elements.
+
+
+SortedSet Interface---
+This interface extends a set whose iterator transverse its elements according to their natural ordering.
+TreeSet implements the sorted interface.
+
+Queue Interface----
+A queue is an ordered of the homogeneous group of elements in which new elements are added at one end(rear) and elements are removed from the other end.
+This interface represents a special type of list whose elements are removed only from the head.
+
+Deque Interface
+A deque (double-ended queue) is a sub-interface of queue interface. It is usually pronounced “deck”.
+This interface was added to the collection framework in Java SE 6.
+
+Map Interface
+1. Map interface is not inherited by the collection interface. 
+It represents an object that stores and retrieves elements in the form of a Key/Value pairs and their location within the Map are determined by a Key.
+
+
+
+2b)List and Set----------
+                      List:                                                                                 Set
+List  allows to add the same or duplicate elements.	                               The set doesn't allow  to add the same or duplicate elements.
+The insertion order is maintained by the List.	                                       Doesn't maintain the insertion order of elements.
+List allows  to add any number of null values.	                                       Set allows  to add at least one null value in it.
+The List implementation classes are LinkedList and ArrayList.	                      The Set implementation classes are TreeSet, HashSet and LinkedHashSet.
+We can get the element of a specified index from the list using the get() method.   We cannot find the element from the Set based on the index because it doesn't provide any get method().              
+It is used when we want to frequently access the elements by using the index.	      It is used when we want to design a collection of distinct elements.
+The method of List interface listiterator() is used to iterate the List elements.	The iterator is used when we need to iterate the Set elements.
+
+
+ArrayList and LinkedList---------
+                            ArrayList	                                                                                         
+1) ArrayList uses a dynamic array to store the elements.	                                
+2) Manipulation with ArrayList is slow because it internally uses an array.
+3) ArrayList is better for storing and accessing data.	
+4) The memory location for the elements of an ArrayList is contiguous.	
+5))ArrayList is a resizable array.
+	
+LinkedList:
+1)LinkedList uses a doubly linked list to store the elements.
+2)Manipulation with LinkedList is faster than ArrayList because it uses a doubly linked list.
+3)LinkedList is better for manipulating data.
+4)The location for the elements of a linked list is not contagious.
+5)LinkedList implements the doubly linked list of the list interface.
+
+
+
+HashSet and TreeSet--------
+HashSet:
+1)It uses hashCode() or equals() method for comparison.
+2)Allow only an element can be null.
+3)It is faster than TreeSet.
+4)HashSet is backed up by a hash table.
+5)It allows only heterogeneous value.
+
+TreeSet:
+1)It uses compare() or compareTo() method for comparison.
+2)It does not allow null elements.
+3)Slower performance than Hashset
+4)Backed up by tree map
+5)It allows only homogeneous value.
+
+
+3)Interface is a blueprint of a class  which has static constants and abstract methods.It contains only abstract methods, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+*Interfaces helps in achieving pure abstraction in java. Interface are purely abstract in java. Interfaces can only have abstract methods.
+*All Interface are abstract by default. So, it’s not mandatory to write abstract keyword with interface.
+*Multiple inheritance - Interface allows us to achieve multiple inheritance as well.
+*Interface always extends another interface. 
+*Interface can extend more than one interface.
+*variables in interface are public, static and final by default. Interface variables are also known as constants.
+*methods in interface are public and abstract by default.
+*Class always implements interface.
+*Interface does not have constructors.
+*Interface doesn’t extend classes.
+*If any new method is added in Interface then all concrete classes which implements that interface must provide implementation of newly added method, because all methods in interface are abstract by default.
+
+Abstract classes------
+1)Abstract classes cannot be instantiated ,they require subclasses to provide a complete implementation.
+2)A class can extend only one abstract class, for single inheritance.
+3)Abstract classes can have constructors, and they are called when a subclass object is instantiated.
+4)Abstract classes can have both abstract and concrete methods.
+5)Abstract classes can have different access modifiers .
+6)Abstract classes can have instance variables (fields) with any access modifier.
+7)Abstract classes are used when to provide a  implementation for a related classes for code reusability.
+8)Abstract classes represent an "is-a" relationship, meaning a subclass is a type of the abstract class.
+
+
+Interfaces---
+1)Interfaces cannot be instantiated at all. They define a contract that classes must adhere to by providing implementations for all declared methods.
+2)A class can implement multiple interfaces, allowing for a form of multiple inheritance.
+3)Interfaces cannot have constructors.
+4)Interfaces can only have abstract methods; they don't provide any method implementations.
+5)All members of an interface are implicitly public.
+6)Interfaces can only have public static finalvariables.
+7)Interfaces are used when you want to define a contract for classes that may be unrelated in terms of hierarchy but need to share a common set of methods.
+8)Interfaces represent a "has-a" relationship, indicating that a class can have the behavior defined by the interface.
+
+
